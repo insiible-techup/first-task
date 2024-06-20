@@ -1,10 +1,18 @@
 name: Terraform plan 
 
 
-on:
+on: 
   pull_request:
-    types:
-      - opened
+      branches:
+          - main
+          
+env:
+    tf_actions_working_dir: ./terraform
+
+permissions:
+  id-token: write   
+  contents: read
+
 
 jobs:
   create_plan:

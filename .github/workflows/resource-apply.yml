@@ -33,6 +33,10 @@ jobs:
       - name: terraform
         uses: hashicorp/setup-terraform@v3
 
+      - name: Terraform Init
+        id: init
+        run: terraform init
+
       - name: Terraform apply
         id: apply
         run: terraform apply --auto-approve

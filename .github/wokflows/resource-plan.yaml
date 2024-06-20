@@ -5,7 +5,7 @@ on:
   pull_request:
       branches:
           - main
-          
+
 env:
     tf_actions_working_dir: ./terraform
 
@@ -86,3 +86,4 @@ jobs:
                     repo: context.repo.repo,
                     body: output
                   })
+                  

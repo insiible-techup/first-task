@@ -31,7 +31,7 @@ jobs:
 
 
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::746196583728:role/make-role
           role-session-name: make-role

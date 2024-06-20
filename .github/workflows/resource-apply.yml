@@ -14,13 +14,17 @@ jobs:
     defaults:
             run:
               working-directory: ${{ env.tf_actions_working_dir }}
+    permissions:
+        pull-requests: write
+        id-token: write   
+        contents: read
     steps:
       - name: Checkout/cloning the github repo
         uses: actions/checkout@v4
 
 
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::746196583728:role/make-role
           role-session-name: make-role

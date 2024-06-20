@@ -118,7 +118,6 @@ resource "aws_instance" "corp-webserver" {
   instance_type = var.instance-type
   key_name = aws_key_pair.corp-key.key_name
   subnet_id = aws_subnet.corp-sb.id
-  associate_public_ip_address = true
   security_groups = [ aws_security_group.allow_con.id ]
 
   tags = {

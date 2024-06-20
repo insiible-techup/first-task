@@ -1,3 +1,20 @@
+# s3 bucket
+###############################
+
+resource "aws_s3_bucket" "gha-bk" {
+  bucket = "gha-bk"
+
+  tags = {
+    Name = "gha-bk"
+  }
+  
+}
+
+
+
+
+
+
 # KEY PAIR
 ###########################
 

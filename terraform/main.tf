@@ -13,7 +13,14 @@ resource "aws_s3_bucket" "gha-bk" {
 
 
 
+resource "aws_s3_bucket" "vka-bk" {
+  bucket = "vka-bk"
 
+  tags = {
+    Name = "vka-bk"
+  }
+  
+}
 
 # KEY PAIR
 ###########################
